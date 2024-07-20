@@ -1,0 +1,171 @@
+/* CSS RESET BEGINNING */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* Typographic tweaks!
+   3. Add accessible line-height
+   4. Improve text rendering */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Remove built-in form typography styles */
+    input, button, textarea, select {
+    font: inherit;
+}
+ 
+/* 7. Avoid text overflows */
+    p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Create a root stacking context */
+    #root, #__next {
+    isolation: isolate;
+}
+/* CSS RESET ENDING */
+
+@font-face {
+    font-family: logo-font;
+    src: url(./assets/Norse-Bold.otf);
+}
+
+:root {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    display: flex;
+    background-color: #F5FBFF;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+}
+
+.left-content {
+    position: relative;
+    width: 60%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.watermark {
+    height: 15%;
+    width: 100%;
+    padding:10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 25%; 
+
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.logo {
+    width: fit-content;
+}
+
+.logo-text {
+    color: white;
+    font-family: logo-font;
+    font-size: 5rem;
+}
+
+.main-content {
+    padding: 5% 0px;
+    height: 100vh;
+    width: 100vw;
+    font-size: 0.9rem;
+}
+
+.main-content > h3,
+button,
+form h3:last-child {
+    margin: 0px 5%;
+    margin-right: 25%;
+}
+
+.inputs {
+    padding: 2% 5%;
+    background-color: white;
+    box-shadow: 0px 2px 5px -1px black;
+}
+
+input {
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+    width: 230px;
+    outline: none;
+}
+
+form h3 {
+    padding-bottom: 10px;
+}
+
+.main-content > h3:nth-child(3){
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+form > h3,
+button {
+    font-size: medium;
+}
+
+form > div > div {
+    font-size: small;
+
+    display: flex;
+    gap: 8%;
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 550;
+    padding-bottom: 5px;
+}
+
+button {
+    font-weight: bold;
+    color: white;
+    background-color: #596D48;
+
+    border: 2px solid #596D48;
+    border-radius: 5px;
+
+    padding: 1% 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+a {
+    color: #596D48;
+}
+
+#email:invalid {
+    border-color: red;
+}
+
+input:focus {
+    border: blue;
+    box-shadow: 0px 0px 3px 1px blue;
+}
